@@ -1,4 +1,4 @@
-import { Header } from "../../components/header/header";
+import { Header } from "../../components/header";
 import { Hero } from "./hero/hero";
 
 export const Main = () => {

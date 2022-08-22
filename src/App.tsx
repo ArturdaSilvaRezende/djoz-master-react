@@ -1,10 +1,13 @@
 import "./App.css";
 import { Main } from "./pages/main/main";
+import { HeaderProvider } from "./shared/context/headerContext";
 
 function App() {
   return (
     <>
-      <Main />
+      <HeaderProvider>
+        <Main />
+      </HeaderProvider>
     </>
   );
 }
