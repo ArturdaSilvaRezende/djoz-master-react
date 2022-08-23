@@ -28,6 +28,11 @@ body {
   font-family: var(--font-family-sans-serif);
 }
 
+@font-face {
+  font-family: "Rockville Solid Regular";
+  src: url("FontsFree-Net-RockvilleSolid.ttf") 
+}
+
 :root {
   --indigo: #6610f2;
   --purple: #6f42c1;
