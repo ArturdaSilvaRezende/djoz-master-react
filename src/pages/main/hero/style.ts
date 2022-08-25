@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import HeroBg from "../img/hero-bg.png";
+import HeroBg from "../assets/img/hero-bg.png";
 
 export const HeroSection = styled.section`
   background: url(${HeroBg});
@@ -61,6 +61,7 @@ export const HeroSection = styled.section`
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: var(--white);
+        color: var(--purple);
         display: block;
         width: 60px;
         height: 60px;
@@ -192,6 +193,12 @@ export const HeroSection = styled.section`
           font-size: 3.5rem;
         }
         &:nth-child(3) {
+          font-size: 1rem;
+        }
+      }
+
+      .heroSection__btn {
+        button {
           font-size: 1rem;
         }
       }

@@ -1,14 +1,14 @@
 import { MutableRefObject, useEffect } from "react";
 import * as C from "./style";
 import { HeaderBtn } from "./headerBtn";
-import { useHeader } from "../../shared/context/headerContext";
+import { useGlobalContext } from "../../shared/context/globalContext";
 import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsDribbble } from "react-icons/bs";
 
 export const Menu = () => {
-  const { menuRef } = useHeader();
+  const { menuRef } = useGlobalContext();
   const ref = menuRef as MutableRefObject<HTMLElement>;
 
   const handleMenuResize = () => {

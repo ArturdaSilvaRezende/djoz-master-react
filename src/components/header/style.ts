@@ -88,12 +88,28 @@ export const Menu = styled.div`
       align-items: center;
 
       li + li {
-        margin-left: 15px;
+        margin-left: 10px;
       }
 
       li {
-        color: var(--white);
+        background-color: var(--white);
+        border-radius: 30%;
+        width: 28px;
+        height: 28px;
+        text-align: center;
+        color: var(--purple);
+        transition: 0.3s ease;
         cursor: pointer;
+
+        &:hover {
+          background-color: var(--purple);
+          color: var(--white);
+        }
+
+        svg {
+          position: relative;
+          top: 5px;
+        }
       }
     }
   }
@@ -109,11 +125,11 @@ export const Menu = styled.div`
 
       ul {
         li + li {
-          margin-left: 15px;
+          margin-left: 12px;
         }
 
         a {
-          font-size: 1rem;
+          font-size: 0.9rem;
         }
       }
     }
@@ -131,7 +147,7 @@ export const Menu = styled.div`
       position: absolute;
       top: 51px;
       left: 0;
-      background-color: rgba(42, 1, 74, 0.5);
+      background-color: rgba(42, 1, 74, 0.96);
       padding: 20px;
       display: none;
       z-index: 999;
@@ -157,11 +173,13 @@ export const Menu = styled.div`
     }
 
     .menu__social {
-      width: 120px;
+      width: 140px;
       margin: 0 auto;
 
-      li + li {
-        margin-left: 12px;
+      ul {
+        li + li {
+          margin-left: 12px;
+        }
       }
     }
 

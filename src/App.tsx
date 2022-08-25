@@ -1,6 +1,6 @@
 import "./App.css";
 import { Main } from "./pages/main/main";
-import { HeaderProvider } from "./shared/context/headerContext";
+import { HeaderProvider } from "./shared/context/globalContext";
 
 function App() {
   return (
