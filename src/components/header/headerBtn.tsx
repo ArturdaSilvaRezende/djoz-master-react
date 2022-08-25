@@ -1,10 +1,10 @@
 import { useCallback, MutableRefObject } from "react";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
-import { useHeader } from "../../shared/context/headerContext";
+import { useGlobalContext } from "../../shared/context/globalContext";
 
 export const HeaderBtn = () => {
-  const { isMenu, setIsMenu, menuRef } = useHeader();
+  const { isMenu, setIsMenu, menuRef } = useGlobalContext();
 
   const handleMenu = useCallback(() => {
     const ref = (menuRef as MutableRefObject<HTMLElement>).current;
