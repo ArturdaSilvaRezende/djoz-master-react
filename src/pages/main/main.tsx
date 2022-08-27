@@ -1,4 +1,5 @@
 import { Header } from "../../components/header";
+import { Events } from "./events/events";
 import { Hero } from "./hero/hero";
 
 export const Main = () => {
@@ -6,6 +7,7 @@ export const Main = () => {
     <main>
       <Header />
       <Hero />
+      <Events />
     </main>
   );
 };
