@@ -4,15 +4,10 @@ export const EventsSection = styled.section`
   max-width: 1200px;
   margin: 0 auto;
 
-  h1,
-  h2 {
-    font-family: "Rajdhani", sans-serif;
-  }
-
   .events__arrow {
     text-align: center;
     font-size: 50px;
-    color: #5c00ce;
+    color: var(--very-purple);
     margin-top: -25px;
 
     @keyframes moveArrow {
