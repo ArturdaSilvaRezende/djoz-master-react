@@ -17,12 +17,10 @@ export const ModalGlobal = styled.div`
 
   button {
     position: absolute;
-    top: 0;
-    right: 0;
-    color: var(--white);
-    font-size: 2rem;
     top: -20px;
     right: -15px;
+    color: var(--white);
+    font-size: 2rem;
 
     svg {
       background-color: var(--indigo);

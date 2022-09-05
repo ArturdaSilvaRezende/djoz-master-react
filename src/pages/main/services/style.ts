@@ -111,7 +111,6 @@ export const ServicesItems = styled.div`
       h2 {
         margin: 20px 0;
         font-size: 1.5rem;
-        font-family: "Rajdhani", sans-serif;
       }
     }
   }
