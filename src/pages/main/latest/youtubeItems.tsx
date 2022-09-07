@@ -15,25 +15,25 @@ export const YoutubeItem = () => {
     .current;
 
   const openModal = useCallback(
-    (index: number) => {
-      if (openModalRef.current[index]) {
-        modalTarget[index].classList.remove("zoomOut");
-        modalTarget[index].style.display = "block";
-        modalTarget[index].classList.add("zoomIn");
+    (i: number) => {
+      if (openModalRef.current[i]) {
+        modalTarget[i].classList.remove("zoomOut");
+        modalTarget[i].style.display = "block";
+        modalTarget[i].classList.add("zoomIn");
       }
     },
     [modalTarget]
   );
 
   const closeModal = useCallback(
-    (index: number) => {
-      if (closeModalRef.current[index]) {
-        modalTarget[index].classList.remove("zoomIn");
-        modalTarget[index].classList.add("zoomOut");
-        videoTarget[index].pause();
+    (i: number) => {
+      if (closeModalRef.current[i]) {
+        modalTarget[i].classList.remove("zoomIn");
+        modalTarget[i].classList.add("zoomOut");
+        videoTarget[i].pause();
 
         setTimeout(() => {
-          modalTarget[index].style.display = "none";
+          modalTarget[i].style.display = "none";
         }, 1100);
       }
     },

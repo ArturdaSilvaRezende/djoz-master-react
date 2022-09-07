@@ -1,5 +1,5 @@
 import * as C from "./style";
-import { GlobalTitle } from "../../../components/title/title";
+import { GlobalTitle } from "../../../components/title";
 import { YoutubeItem } from "./youtubeItems";
 
 export const LatestYoutube = () => {

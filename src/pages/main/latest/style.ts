@@ -49,7 +49,6 @@ export const LatestTracks = styled.section`
     margin-top: 12%;
 
     .latest__contents {
-      padding: 0 20px;
       .latest__contents--pic {
         margin-top: 12%;
 
@@ -171,7 +170,14 @@ export const LatestYoutube = styled.div`
 
   @media screen and (max-width: 992px) {
     .GlobalTitle {
-      width: 100%;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 599px) {
+    .GlobalTitle {
+      margin: 60px auto;
     }
   }
 `;
@@ -279,7 +285,7 @@ export const YoutubeItem = styled.div`
 
   @media screen and (min-width: 768px) and (max-width: 992px) {
     margin: 60px auto 30px auto;
-    padding: 0 30px;
+    width: 90%;
 
     figure {
       width: 30%;
