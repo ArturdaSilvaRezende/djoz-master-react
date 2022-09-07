@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 100%;
+  overflow: visible;
 }
 
 img {
@@ -33,7 +34,6 @@ h2 {
 body {
   font-family: var(--font-family-sans-serif);
   background-color: var(--light);
-
 }
 
 @font-face {

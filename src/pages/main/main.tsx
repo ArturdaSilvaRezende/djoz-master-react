@@ -1,8 +1,9 @@
+import { Countdown } from "../../components/countdown";
 import { Header } from "../../components/header";
-import { Events } from "./events/events";
-import { Hero } from "./hero/hero";
-import { Latest } from "./latest/latest";
-import { Services } from "./services/services";
+import { Events } from "./events";
+import { Hero } from "./hero";
+import { Latest } from "./latest";
+import { Services } from "./services";
 
 export const Main = () => {
   return (
@@ -12,6 +13,7 @@ export const Main = () => {
       <Events />
       <Services />
       <Latest />
+      <Countdown />
     </main>
   );
 };

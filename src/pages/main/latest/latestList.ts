@@ -71,7 +71,7 @@ export const YoutubeList: YoutubeFeed[] = [
   {
     id: 1,
     img: `${Youtube01}`,
-    artist: "Bailey McKee - Home (Hartshook Remix)",
+    artist: "Bailey McKee - Home",
     festival: "Imagine Music Festival",
     modalVideo: `${Festival01}`,
   },

@@ -1,7 +1,7 @@
 import { useCallback, MutableRefObject } from "react";
 import { Modal } from "../../../shared/types/typeModal";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import { Portal } from "../../../components/modal/portal";
+import { Portal } from "../../../components/modal";
 import { ModalGlobal } from "../../../shared/style/modalStyle";
 import ServicesVideoMP4 from "../assets/videos/services.mp4";
 import ServicesVideoOGV from "../assets/videos/services.ogv";

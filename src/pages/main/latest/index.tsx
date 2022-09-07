@@ -1,5 +1,5 @@
 import * as C from "./style";
-import { GlobalTitle } from "../../../components/title/title";
+import { GlobalTitle } from "../../../components/title";
 import { LatestMusic } from "./latestMusics";
 import { LatestYoutube } from "./latestYoutube";
 import TrackRight from "../assets/img/track-right.jpg";
@@ -22,26 +22,6 @@ export const Latest = () => {
         </div>
       </C.LatestTracks>
       <LatestYoutube />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </>
   );
 };
