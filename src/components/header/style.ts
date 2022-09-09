@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
+type Props = {
+  background: string;
+};
+
 export const Header = styled.header`
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(42, 1, 74, 0.5);
+  background-color: ${(props: Props) => props.background};
   padding: 15px 30px;
   z-index: 999;
 
@@ -147,7 +151,7 @@ export const Menu = styled.div`
       position: absolute;
       top: 51px;
       left: 0;
-      background-color: rgba(42, 1, 74, 0.96);
+      background-color: #290849;
       padding: 20px;
       display: none;
       z-index: 999;

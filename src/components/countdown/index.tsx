@@ -41,7 +41,7 @@ export const Countdown = () => {
     <C.Countdown>
       <C.CountdownContainer>
         <hgroup>
-          <h1>Tomorrowland 2020</h1>
+          <h1>Tomorrowland 2022</h1>
           <h3>Music Festival Start In</h3>
         </hgroup>
         <div className="countdown__time" ref={countDownTimeRef}>

@@ -9,6 +9,7 @@ export const Countdown = styled.section`
   background-size: cover;
   background-position: top center;
   height: 600px;
+  z-index: -1;
 
   @media screen and (min-width: 768px) and (max-width: 992px) {
     margin-top: 120px;
