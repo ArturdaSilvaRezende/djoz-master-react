@@ -1,15 +1,10 @@
 import styled from "styled-components";
 
-type Props = {
-  background: string;
-};
-
 export const Header = styled.header`
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  background-color: ${(props: Props) => props.background};
   padding: 15px 30px;
   z-index: 999;
 
@@ -78,6 +73,26 @@ export const Menu = styled.div`
           color: var(--white);
           font-weight: 500;
           text-transform: uppercase;
+          position: relative;
+          display: block;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            top: 25.2px;
+            background-color: var(--white);
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out 0s;
+          }
+          &:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+          }
         }
       }
     }
@@ -171,6 +186,13 @@ export const Menu = styled.div`
             font-size: 1em;
             text-shadow: 0 0 10px var(--indigo);
             letter-spacing: 2px;
+
+            &:hover:before {
+              content: "";
+              width: 33%;
+              left: 50%;
+              transform: translateX(-50%);
+            }
           }
         }
       }

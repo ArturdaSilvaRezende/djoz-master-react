@@ -9,6 +9,7 @@ export const Footer = styled.footer`
   background-position: top center;
   height: 549px;
   position: relative;
+  top: 40px;
 
   .footer__copyright {
     position: absolute;

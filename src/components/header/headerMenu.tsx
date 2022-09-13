@@ -1,5 +1,6 @@
 import { MutableRefObject, useEffect } from "react";
 import * as C from "./style";
+import { NavLink } from "react-router-dom";
 import { HeaderBtn } from "./headerBtn";
 import { useGlobalContext } from "../../shared/context/globalContext";
 import { FaFacebookF } from "react-icons/fa";
@@ -31,10 +32,20 @@ export const Menu = () => {
       <nav className="menu__navigation" ref={ref}>
         <ul>
           <li>
-            <a href=" #">Home</a>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <a href=" #">About</a>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              About
+            </NavLink>
           </li>
           <li>
             <a href=" #">Discography</a>

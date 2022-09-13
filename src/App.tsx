@@ -1,13 +1,16 @@
 import "./App.css";
 import "./shared/style/modalAnimation.css";
-import { Main } from "./pages/main/main";
 import { HeaderProvider } from "./shared/context/globalContext";
+import { BrowserRouter } from "react-router-dom";
+import { AppRoutes } from "./routes";
 
 function App() {
   return (
     <>
       <HeaderProvider>
-        <Main />
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
       </HeaderProvider>
     </>
   );
