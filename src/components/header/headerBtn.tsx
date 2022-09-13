@@ -9,7 +9,7 @@ export const HeaderBtn = () => {
   const handleMenu = useCallback(() => {
     const ref = (menuRef as MutableRefObject<HTMLElement>).current;
 
-    if (isMenu === false) {
+    if (!isMenu) {
       ref.classList.remove("fadeOut");
       ref.style.display = "block";
       ref.classList.add("fadeIn");

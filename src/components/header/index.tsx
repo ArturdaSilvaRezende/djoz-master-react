@@ -1,9 +1,14 @@
 import { useEffect, useRef } from "react";
 import * as C from "./style";
+import { NavLink } from "react-router-dom";
 import { Menu } from "./headerMenu";
 import "./animation.css";
 
-export const Header = () => {
+type HeaderBg = {
+  background: string;
+};
+
+export const Header = (props: HeaderBg) => {
   const headerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -21,7 +26,7 @@ export const Header = () => {
         if (headerRef.current) {
           headerRef.current.classList.remove("fadeIn");
           headerRef.current.style.position = "absolute";
-          headerRef.current.style.backgroundColor = "rgba(42, 1, 74, 0.5)";
+          headerRef.current.style.backgroundColor = `${props.background}`;
         }
       }
     };
@@ -32,15 +37,18 @@ export const Header = () => {
     return window.removeEventListener("scroll", () => {
       scrollTopHeader();
     });
-  }, [headerRef]);
+  }, [headerRef, props]);
 
   return (
-    <C.Header ref={headerRef} background="rgba(42, 1, 74, 0.5)">
+    <C.Header
+      ref={headerRef}
+      style={{ backgroundColor: `${props.background}` }}
+    >
       <C.Container>
-        <a className="header__logo" href="index.html">
+        <NavLink to="/" className={() => "header__logo"}>
           <span>DJ</span>
           <span>OZ</span>
-        </a>
+        </NavLink>
         <Menu />
       </C.Container>
     </C.Header>

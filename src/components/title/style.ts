@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const GlobalTitle = styled.div`
   position: relative;
   width: 100%;
+  z-index: 2;
 
   h1 {
     font-family: "Rajdhani", sans-serif;
@@ -17,7 +18,7 @@ export const GlobalTitle = styled.div`
 
   p {
     font-size: 5rem;
-    color: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 88%);
     font-family: "Rockville Solid Regular";
     position: absolute;
     left: 0;
@@ -32,15 +33,16 @@ export const GlobalTitle = styled.div`
     width: 80%;
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       top: 10px;
       left: 25px;
     }
 
     p {
-      top: -10px;
-      font-size: 2.2em;
-      letter-spacing: 12px;
+      top: 0;
+      left: 10px;
+      font-size: 2.5em;
+      letter-spacing: 10px;
     }
   }
 

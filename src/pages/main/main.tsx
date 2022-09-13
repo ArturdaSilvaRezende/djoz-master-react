@@ -9,7 +9,7 @@ import { Services } from "./services";
 export const Main = () => {
   return (
     <>
-      <Header />
+      <Header background="rgba(42, 1, 74, 0.5)" />
       <main>
         <Hero />
         <Events />

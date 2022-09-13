@@ -58,6 +58,7 @@ body {
   --light: #f8f9fa;
   --dark: #343a40;
   --swiper-navigation-size:  #6c757d;
+  --breadcrumbs: #290849;
   --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
