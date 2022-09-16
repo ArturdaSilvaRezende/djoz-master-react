@@ -26,7 +26,6 @@ export const About = () => {
           <AboutServices />
         </C.AboutServices>
       </C.Container>
-
       <Footer />
     </C.About>
   );

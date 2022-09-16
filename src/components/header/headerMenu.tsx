@@ -48,7 +48,12 @@ export const Menu = () => {
             </NavLink>
           </li>
           <li>
-            <a href=" #">Discography</a>
+            <NavLink
+              to="/discography"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Discography
+            </NavLink>
           </li>
           <li>
             <a href=" #">Tours</a>

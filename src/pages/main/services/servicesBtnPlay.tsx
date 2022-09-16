@@ -1,24 +1,22 @@
-import { useCallback, MutableRefObject } from "react";
+import { useGlobalContext } from "../../../shared/context/globalContext";
 import * as C from "./style";
 import { FaPlay } from "react-icons/fa";
 import { Modal } from "../../../shared/types/typeModal";
 
 export const ServicesBtnPlay = (props: Modal) => {
-  const showModal = useCallback(() => {
-    if (props.modalRef !== null) {
-      const ref = props.modalRef as MutableRefObject<HTMLDivElement>;
-      if (props.isModal === false) {
-        ref.current.classList.remove("zoomOut");
-        ref.current.style.display = "block";
-        ref.current.classList.add("zoomIn");
-        return props.setIsModal(true);
-      }
-    }
-  }, [props]);
+  const { showModal } = useGlobalContext();
 
   return (
     <C.ServicesBtnPlay>
-      <button onClick={showModal}>
+      <button
+        onClick={() =>
+          showModal({
+            isModal: props.isModal,
+            setIsModal: props.setIsModal,
+            modalRef: props.modalRef,
+          })
+        }
+      >
         <FaPlay />
       </button>
     </C.ServicesBtnPlay>
