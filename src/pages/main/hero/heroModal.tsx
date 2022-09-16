@@ -1,4 +1,5 @@
-import { useCallback, MutableRefObject } from "react";
+import { MutableRefObject } from "react";
+import { useGlobalContext } from "../../../shared/context/globalContext";
 import { Modal } from "../../../shared/types/typeModal";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { Portal } from "../../../components/modal";
@@ -7,28 +8,7 @@ import VideoHeroMP4 from "../assets/videos/hero.mp4";
 import VideoHeroOGG from "../assets/videos/hero.ogv";
 
 export const HeroModal = (props: Modal) => {
-  const closeModal = useCallback(() => {
-    if (props.modalRef !== null) {
-      const ref = props.modalRef as MutableRefObject<HTMLDivElement>;
-      const videoRef =
-        props.modalVideoRef as MutableRefObject<HTMLVideoElement>;
-
-      if (props.isModal === true) {
-        ref.current.classList.remove("zoomIn");
-        ref.current.classList.add("zoomOut");
-
-        setTimeout(() => {
-          ref.current.style.display = "none";
-        }, 1100);
-
-        if (videoRef.current !== null) {
-          videoRef.current.pause();
-        }
-
-        return props.setIsModal(false);
-      }
-    }
-  }, [props]);
+  const { closeModal } = useGlobalContext();
 
   return (
     <Portal className="hero-main__modal">
@@ -41,7 +21,16 @@ export const HeroModal = (props: Modal) => {
           <source src={VideoHeroOGG} type="video/ogg" />
           Your browser does not support the video tag.
         </video>
-        <button onClick={closeModal}>
+        <button
+          onClick={() =>
+            closeModal({
+              isModal: props.isModal,
+              setIsModal: props.setIsModal,
+              modalRef: props.modalRef,
+              modalVideoRef: props.modalVideoRef,
+            })
+          }
+        >
           <AiOutlineCloseCircle />
         </button>
       </ModalGlobal>

@@ -1,25 +1,15 @@
-import { MutableRefObject, useCallback, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import { useGlobalContext } from "../../shared/context/globalContext";
 import * as C from "./style";
 import { GlobalTitle } from "../../components/title";
 import { SkillVideo } from "./SkillVideo";
 import { FaPlay } from "react-icons/fa";
 
 export const SkillsSection = () => {
+  const { showModal } = useGlobalContext();
   const SkillRef = useRef<HTMLDivElement | null>(null);
   const SkillVideoRef = useRef<HTMLVideoElement | null>(null);
   const [isModal, setIsModal] = useState(false);
-
-  const showModal = useCallback(() => {
-    if (SkillRef !== null) {
-      const ref = SkillRef as MutableRefObject<HTMLDivElement>;
-      if (isModal === false) {
-        ref.current.classList.remove("zoomOut");
-        ref.current.style.display = "block";
-        ref.current.classList.add("zoomIn");
-        return setIsModal(true);
-      }
-    }
-  }, [isModal]);
 
   return (
     <C.SkillsSection>
@@ -59,7 +49,15 @@ export const SkillsSection = () => {
       </C.Skills>
       <C.SkillsVideo>
         <div>
-          <button onClick={showModal}>
+          <button
+            onClick={() =>
+              showModal({
+                isModal: isModal,
+                setIsModal: setIsModal,
+                modalRef: SkillRef,
+              })
+            }
+          >
             <FaPlay />
           </button>
         </div>
