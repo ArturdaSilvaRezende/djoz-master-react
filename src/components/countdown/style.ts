@@ -9,7 +9,6 @@ export const Countdown = styled.section`
   background-size: cover;
   background-position: top center;
   height: 600px;
-  z-index: -1;
 
   @media screen and (min-width: 768px) and (max-width: 992px) {
     margin-top: 120px;
@@ -138,7 +137,7 @@ export const CountdownContainer = styled.div`
     }
 
     .countdown__time {
-      width: 60%;
+      width: 70%;
       margin: 20px auto 0 auto;
 
       p {
