@@ -38,7 +38,7 @@ export const Countdown = () => {
   }, [countDownDate]);
 
   return (
-    <C.Countdown>
+    <C.Countdown className="countdown">
       <C.CountdownContainer>
         <hgroup>
           <h1>Tomorrowland 2022</h1>

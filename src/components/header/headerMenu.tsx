@@ -56,10 +56,12 @@ export const Menu = () => {
             </NavLink>
           </li>
           <li>
-            <a href=" #">Tours</a>
-          </li>
-          <li>
-            <a href=" #">Videos</a>
+            <NavLink
+              to="/tours"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Tours
+            </NavLink>
           </li>
           <li>
             <a href=" #">Contact</a>

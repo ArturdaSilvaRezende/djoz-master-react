@@ -38,7 +38,6 @@ export const Breadcrumbs = styled.div`
   }
 
   @media screen and (max-width: 992px) {
-    width: 90%;
     margin: 100px auto 50px auto;
   }
 `;
