@@ -15,6 +15,10 @@ export const Container = styled.div`
     text-align: center;
   }
 
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+  }
+
   @media screen and (min-width: 768px) and (max-width: 992px) {
     .GlobalTitle {
       margin-top: 5%;
@@ -45,11 +49,6 @@ export const SkillsSection = styled.section`
       color: #f2f2f2;
       opacity: 0.2;
     }
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 992px) {
-    width: 90%;
-    margin: 0 auto;
   }
 
   @media screen and (max-width: 767px) {

@@ -63,8 +63,14 @@ export const Menu = () => {
               Tours
             </NavLink>
           </li>
+
           <li>
-            <a href=" #">Contact</a>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Contact
+            </NavLink>
           </li>
         </ul>
       </nav>
