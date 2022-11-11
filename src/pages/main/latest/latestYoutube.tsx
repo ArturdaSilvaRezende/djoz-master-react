@@ -1,12 +1,12 @@
 import * as C from "./style";
 import { GlobalTitle } from "../../../components/title";
-import { YoutubeItem } from "./youtubeItems";
+import { LatestYoutubeItem } from "./latestYoutubeItems";
 
 export const LatestYoutube = () => {
   return (
     <C.LatestYoutube>
       <GlobalTitle title="Youtube Feed" description="Latest Videos" />
-      <YoutubeItem />
+      <LatestYoutubeItem />
     </C.LatestYoutube>
   );
 };

@@ -38,7 +38,7 @@ body {
 
 @font-face {
   font-family: "Rockville Solid Regular";
-  src: url("FontsFree-Net-RockvilleSolid.ttf") 
+  src: url("./shared/fonts/FontsFree-Net-RockvilleSolid.ttf") 
 }
 
 :root {

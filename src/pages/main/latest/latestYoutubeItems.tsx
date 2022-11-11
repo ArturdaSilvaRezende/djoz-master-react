@@ -4,7 +4,7 @@ import { FaPlay } from "react-icons/fa";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { YoutubeList } from "./latestList";
 
-export const YoutubeItem = () => {
+export const LatestYoutubeItem = () => {
   const modalTargetRef = useRef<(HTMLDivElement | null)[]>([]);
   const modalVideoRef = useRef<(HTMLVideoElement | null)[]>([]);
   const openModalRef = useRef<(HTMLButtonElement | null)[]>([]);

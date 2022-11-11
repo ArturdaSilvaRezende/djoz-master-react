@@ -2,23 +2,28 @@ import styled from "styled-components";
 
 export const ModalGlobal = styled.div`
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
   z-index: 1000;
   display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
 
   video {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
     border-radius: 7px;
     object-fit: cover;
     width: 50vw;
+    height: 45vh;
+    transform: translate(-50%, -50%);
   }
 
   button {
     position: absolute;
-    top: -20px;
-    right: -15px;
+    right: 20%;
+    top: 26%;
+    transform: translate(-50%, -50%);
     color: var(--white);
     font-size: 2rem;
 
@@ -35,8 +40,9 @@ export const ModalGlobal = styled.div`
     }
     button {
       font-size: 2.5rem;
-      top: -40px;
-      right: -20px;
+      right: 6%;
+      top: 34%;
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -49,21 +55,27 @@ export const ModalGlobal = styled.div`
   @media screen and (min-width: 600px) and (max-width: 767px) {
     video {
       height: 300px;
+      width: 80vw;
     }
     button {
       font-size: 2rem;
-      top: -40px;
+      right: 2%;
+      top: 34%;
+      transform: translate(-50%, -50%);
     }
   }
 
   @media screen and (max-width: 599px) {
     video {
       height: 30vh;
+      width: 75vw;
     }
 
     button {
       font-size: 1.5rem;
-      top: -30px;
+      right: 2%;
+      top: 34%;
+      transform: translate(-50%, -50%);
     }
   }
 `;
