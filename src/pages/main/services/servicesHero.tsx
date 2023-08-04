@@ -1,6 +1,6 @@
 import { useToggle } from "../../../shared/hooks/useToggle";
 import { ServicesBtnPlay } from "./servicesBtnPlay";
-import { ServicesModal } from "./ServicesModal";
+import { ServicesModal } from "./servicesModal";
 import * as C from "./style";
 
 export const ServicesHero = () => {

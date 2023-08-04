@@ -1,6 +1,6 @@
 import { useToggle } from "../../../shared/hooks/useToggle";
-import { HeroDescription } from "./HeroDescription";
-import { HeroModal } from "./HeroModal";
+import { HeroDescription } from "./heroDescription";
+import { HeroModal } from "./heroModal";
 import * as C from "./style";
 
 export const Hero = () => {
