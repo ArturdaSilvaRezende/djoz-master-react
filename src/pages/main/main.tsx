@@ -2,7 +2,7 @@ import { Countdown } from "../../components/countdown";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/Header";
 import { Events } from "./events";
-import { Hero } from "./Hero";
+import { Hero } from "./hero";
 import { Latest } from "./latest";
 import { Services } from "./services";
 
