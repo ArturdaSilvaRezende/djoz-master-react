@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu } from "./HeaderMenu";
+import { Menu } from "./headerMenu";
 import * as C from "./style";
 
 type HeaderBg = {

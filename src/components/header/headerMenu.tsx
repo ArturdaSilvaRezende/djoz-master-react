@@ -1,8 +1,8 @@
 import { useEffect, useCallback } from "react";
-import HeaderMenuNavigation from "./HeaderMenuNavigation";
-import HeaderMenuSocial from "./HeaderMenuSocial";
+import HeaderMenuNavigation from "./headerMenuNavigation";
+import HeaderMenuSocial from "./headerMenuSocial";
 import { useToggle } from "../../shared/hooks/useToggle";
-import HeaderBtn from "./HeaderBtn";
+import HeaderBtn from "./headerBtn";
 import * as C from "./style";
 
 export const Menu = () => {
