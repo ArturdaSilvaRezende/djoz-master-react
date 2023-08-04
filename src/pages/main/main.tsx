@@ -1,6 +1,6 @@
 import { Countdown } from "../../components/countdown";
 import { Footer } from "../../components/footer";
-import { Header } from "../../components/Header";
+import { Header } from "../../components/header";
 import { Events } from "./events";
 import { Hero } from "./hero";
 import { Latest } from "./latest";

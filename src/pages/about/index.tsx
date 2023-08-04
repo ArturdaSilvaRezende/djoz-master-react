@@ -1,5 +1,5 @@
 import * as C from "./style";
-import { Header } from "../../components/Header";
+import { Header } from "../../components/header";
 import { Breadcrumbs } from "../../components/breadcrumbs";
 import { GlobalTitle } from "../../components/title";
 import { SkillsSection } from "./aboutSkillsSection";
