@@ -1,0 +1,81 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+}
+
+.modal__contents {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+}
+
+.modal__contents video {
+  border-radius: 7px;
+  object-fit: cover;
+  width: 50vw;
+  height: 45vh;
+}
+
+.modal__contents button {
+  position: absolute;
+  right: -25px;
+  top: -70px;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.modal__contents button svg {
+  background-color: var(--indigo);
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 992px) {
+  .modal__contents button {
+    top: -30px;
+    right: -25px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .modal__contents video {
+    width: 70vw;
+    height: 300px;
+  }
+
+  .modal__contents button {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .modal__contents video {
+    height: 300px;
+    width: 80vw;
+  }
+
+  .modal__contents button {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .modal__contents {
+    width: 80%;
+  }
+
+  .modal__contents video {
+    height: 30vh;
+    width: 100%;
+  }
+
+  .modal__contents button {
+    font-size: 1.5rem;
+  }
+}

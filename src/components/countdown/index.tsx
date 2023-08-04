@@ -11,9 +11,9 @@ export const Countdown = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const now = new Date().getTime();
+      // const now = new Date().getTime();
 
-      const distance = countDownDate - now;
+      const distance = countDownDate - 2025;
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       setDays(days);
@@ -41,7 +41,7 @@ export const Countdown = () => {
     <C.Countdown className="countdown">
       <C.CountdownContainer>
         <hgroup>
-          <h1>Tomorrowland 2022</h1>
+          <h1>Tomorrowland 2025</h1>
           <h3>Music Festival Start In</h3>
         </hgroup>
         <div className="countdown__time" ref={countDownTimeRef}>

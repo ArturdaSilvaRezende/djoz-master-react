@@ -1,5 +1,5 @@
 import * as C from "./style";
-import { Header } from "../../components/header";
+import { Header } from "../../components/Header";
 import { Footer } from "../../components/footer";
 import { Breadcrumbs } from "../../components/breadcrumbs";
 import { Countdown } from "../../components/countdown";

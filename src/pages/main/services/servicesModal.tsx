@@ -1,39 +1,32 @@
-import { MutableRefObject } from "react";
-import { useGlobalContext } from "../../../shared/context/globalContext";
-import { Modal } from "../../../shared/types/typeModal";
+import { useToggle } from "../../../shared/hooks/useToggle";
+import Portal from "../../../components/Portal";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import { Portal } from "../../../components/modal";
-import { ModalGlobal } from "../../../shared/style/modalStyle";
 import ServicesVideoMP4 from "../assets/videos/services.mp4";
 import ServicesVideoOGV from "../assets/videos/services.ogv";
+import "../../../shared/style/modalContents.css";
+import "../../../shared/style/modalAnimation.css";
 
-export const ServicesModal = (props: Modal) => {
-  const { closeModal } = useGlobalContext();
+export const ServicesModal = () => {
+  const { dispatch } = useToggle();
+
+  const HandleCloseModal = () => {
+    dispatch({ type: "TOGGLE_SERVICES_MODAL" });
+  };
 
   return (
-    <Portal className="hero-main__services-modal">
-      <ModalGlobal ref={props.modalRef as MutableRefObject<HTMLDivElement>}>
-        <video
-          controls
-          ref={props.modalVideoRef as MutableRefObject<HTMLVideoElement>}
-        >
-          <source src={ServicesVideoMP4} type="video/mp4" />
-          <source src={ServicesVideoOGV} type="video/ogg" />
-          Your browser does not support the video tag.
-        </video>
-        <button
-          onClick={() =>
-            closeModal({
-              isModal: props.isModal,
-              setIsModal: props.setIsModal,
-              modalRef: props.modalRef,
-              modalVideoRef: props.modalVideoRef,
-            })
-          }
-        >
-          <AiOutlineCloseCircle />
-        </button>
-      </ModalGlobal>
-    </Portal>
+    <div className="modal">
+      <Portal containerId="modal-root">
+        <div className="modal__contents zoomIn">
+          <video controls>
+            <source src={ServicesVideoMP4} type="video/mp4" />
+            <source src={ServicesVideoOGV} type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
+          <button onClick={HandleCloseModal}>
+            <AiOutlineCloseCircle />
+          </button>
+        </div>
+      </Portal>
+    </div>
   );
 };

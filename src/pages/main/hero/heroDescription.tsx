@@ -1,12 +1,16 @@
-import { useGlobalContext } from "../../../shared/context/globalContext";
-import { Modal } from "../../../shared/types/typeModal";
+import { useToggle } from "../../../shared/hooks/useToggle";
 import { FaPlay } from "react-icons/fa";
+import * as C from "./style";
 
-export const HeroDescription = (props: Modal) => {
-  const { showModal } = useGlobalContext();
+export const HeroDescription = () => {
+  const { dispatch } = useToggle();
+
+  const HandleOpenModal = () => {
+    dispatch({ type: "TOGGLE_HERO_MODAL" });
+  };
 
   return (
-    <div className="heroSection__description">
+    <C.HeroDescription>
       <p>New Single</p>
       <p>
         <span>Feel the heart</span>
@@ -17,19 +21,10 @@ export const HeroDescription = (props: Modal) => {
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
       <div className="heroSection__btn">
-        <button
-          type="button"
-          onClick={() =>
-            showModal({
-              isModal: props.isModal,
-              setIsModal: props.setIsModal,
-              modalRef: props.modalRef,
-            })
-          }
-        >
+        <button type="button" onClick={HandleOpenModal}>
           <FaPlay />
         </button>
       </div>
-    </div>
+    </C.HeroDescription>
   );
 };

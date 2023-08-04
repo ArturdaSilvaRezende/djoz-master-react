@@ -1,15 +1,15 @@
-import { useRef, useState } from "react";
-import { useGlobalContext } from "../../shared/context/globalContext";
-import * as C from "./style";
+import { useToggle } from "../../shared/hooks/useToggle";
 import { GlobalTitle } from "../../components/title";
 import { SkillVideo } from "./SkillVideo";
 import { FaPlay } from "react-icons/fa";
+import * as C from "./style";
 
 export const SkillsSection = () => {
-  const { showModal } = useGlobalContext();
-  const SkillRef = useRef<HTMLDivElement | null>(null);
-  const SkillVideoRef = useRef<HTMLVideoElement | null>(null);
-  const [isModal, setIsModal] = useState(false);
+  const { dispatch, state } = useToggle();
+
+  const HandleOpenModal = () => {
+    dispatch({ type: "TOGGLE_ABOUT_MODAL" });
+  };
 
   return (
     <C.SkillsSection>
@@ -49,24 +49,11 @@ export const SkillsSection = () => {
       </C.Skills>
       <C.SkillsVideo>
         <div>
-          <button
-            onClick={() =>
-              showModal({
-                isModal: isModal,
-                setIsModal: setIsModal,
-                modalRef: SkillRef,
-              })
-            }
-          >
+          <button onClick={HandleOpenModal}>
             <FaPlay />
           </button>
         </div>
-        <SkillVideo
-          modalRef={SkillRef}
-          modalVideoRef={SkillVideoRef}
-          isModal={isModal}
-          setIsModal={setIsModal}
-        />
+        {state.isModalAbout && <SkillVideo />}
       </C.SkillsVideo>
     </C.SkillsSection>
   );

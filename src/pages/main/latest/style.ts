@@ -190,7 +190,7 @@ export const YoutubeItem = styled.div`
   margin: 120px auto 30px auto;
 
   figure {
-    width: 30%;
+    width: 32%;
     background-color: var(--white);
     box-shadow: 0 10px 10px var(--secondary);
     position: relative;
@@ -246,29 +246,34 @@ export const YoutubeItem = styled.div`
       }
     }
 
-    .youtubeFeed__video {
+    .youtubeFeed__container {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: none;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.8);
 
-      video {
-        width: 23vw;
-        height: 200px;
-        object-fit: cover;
-      }
-
-      button {
+      .youtubeFeed__video {
         position: absolute;
-        color: var(--white);
-        font-size: 2rem;
-        top: -20px;
-        right: -20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-        svg {
-          background-color: var(--indigo);
-          border-radius: 50%;
+        video {
+          width: 25vw;
+          height: 200px;
+          position: relative;
+        }
+
+        button {
+          position: absolute;
+          color: var(--white);
+          font-size: 2rem;
+          top: -10px;
+          left: -10px;
+
+          svg {
+            background-color: var(--indigo);
+            border-radius: 50%;
+          }
         }
       }
     }
@@ -298,22 +303,18 @@ export const YoutubeItem = styled.div`
         }
       }
 
-      .youtubeFeed__video {
-        top: 95%;
-        left: 50%;
+      .youtubeFeed__container {
+        .youtubeFeed__video {
+          video {
+            width: 23vw;
+            height: 200px;
+            position: relative;
+            top: -20px;
+          }
 
-        transform: translate(-50%, -50%);
-
-        video {
-          width: 23vw;
-          height: 200px;
-          position: relative;
-          top: -130px;
-        }
-
-        button {
-          top: -130px;
-          right: -15px;
+          button {
+            top: 10px;
+          }
         }
       }
     }
@@ -336,14 +337,15 @@ export const YoutubeItem = styled.div`
       width: 70%;
       margin: 0 auto;
 
-      .youtubeFeed__video {
-        video {
-          width: 65vw;
-          height: 200px;
-        }
-        button {
-          top: -10px;
-          right: -15px;
+      .youtubeFeed__container {
+        .youtubeFeed__video {
+          video {
+            width: 65vw;
+            height: 200px;
+          }
+          button {
+            top: -10px;
+          }
         }
       }
     }
@@ -356,14 +358,14 @@ export const YoutubeItem = styled.div`
       width: 90%;
       margin: 0 auto;
 
-      .youtubeFeed__video {
-        video {
-          width: 80vw;
-          height: 200px;
-        }
-        button {
-          top: 0;
-          right: -15px;
+      .youtubeFeed__container {
+        .youtubeFeed__video {
+          width: 90%;
+
+          video {
+            width: 80vw;
+            height: 200px;
+          }
         }
       }
     }

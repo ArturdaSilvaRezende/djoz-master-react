@@ -1,22 +1,17 @@
-import { useGlobalContext } from "../../../shared/context/globalContext";
-import * as C from "./style";
+import { useToggle } from "../../../shared/hooks/useToggle";
 import { FaPlay } from "react-icons/fa";
-import { Modal } from "../../../shared/types/typeModal";
+import * as C from "./style";
 
-export const ServicesBtnPlay = (props: Modal) => {
-  const { showModal } = useGlobalContext();
+export const ServicesBtnPlay = () => {
+  const { dispatch } = useToggle();
+
+  const HandleOpenModal = () => {
+    dispatch({ type: "TOGGLE_SERVICES_MODAL" });
+  };
 
   return (
     <C.ServicesBtnPlay>
-      <button
-        onClick={() =>
-          showModal({
-            isModal: props.isModal,
-            setIsModal: props.setIsModal,
-            modalRef: props.modalRef,
-          })
-        }
-      >
+      <button onClick={HandleOpenModal}>
         <FaPlay />
       </button>
     </C.ServicesBtnPlay>

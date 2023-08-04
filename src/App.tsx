@@ -1,17 +1,17 @@
-import "./App.css";
-import "./shared/style/modalAnimation.css";
-import { HeaderProvider } from "./shared/context/globalContext";
+import ToggleProvider from "./shared/context/ToggleContext";
 import { BrowserRouter } from "react-router-dom";
 import { AppRoutes } from "./routes";
+import "./shared/style/modalAnimation.css";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <HeaderProvider>
+      <ToggleProvider>
         <BrowserRouter>
           <AppRoutes />
         </BrowserRouter>
-      </HeaderProvider>
+      </ToggleProvider>
     </>
   );
 }

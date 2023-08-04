@@ -1,6 +1,6 @@
 import * as C from "./style";
-import { ServicesHero } from "./servicesHero";
-import { ServicesItems } from "./servicesItems";
+import { ServicesHero } from "./ServicesHero";
+import { ServicesItems } from "./ServicesItems";
 
 export const Services = () => {
   return (

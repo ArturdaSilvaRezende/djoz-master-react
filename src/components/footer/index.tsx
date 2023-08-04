@@ -8,6 +8,8 @@ import { BsDribbble } from "react-icons/bs";
 import { TbBrandTelegram } from "react-icons/tb";
 
 export const Footer = () => {
+  const DateNow = new Date();
+
   return (
     <C.Footer>
       <C.Container>
@@ -66,7 +68,8 @@ export const Footer = () => {
 
       <div className="footer__copyright">
         <p>
-          Copyright © 2022 All rights reserved | This template is made with by
+          Copyright © {DateNow.getFullYear()} All rights reserved | This
+          template is made with by
           <a href="https://colorlib.com/" target="_blank" rel="noreferrer">
             {" "}
             Colorlib

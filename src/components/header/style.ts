@@ -9,7 +9,7 @@ export const Header = styled.header`
   z-index: 999;
 
   @media screen and (max-width: 767px) {
-    padding: 10px 20px;
+    padding: 20px;
     box-shadow: 0 0 10px var(--white);
   }
 `;
@@ -164,11 +164,10 @@ export const Menu = styled.div`
   @media screen and (max-width: 767px) {
     .menu__navigation {
       position: absolute;
-      top: 51px;
+      top: 69px;
       left: 0;
       background-color: #290849;
       padding: 20px;
-      display: none;
       z-index: 999;
       width: 100%;
 

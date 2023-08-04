@@ -1,26 +1,15 @@
-import { useState, useRef } from "react";
-import * as C from "./style";
+import { useToggle } from "../../../shared/hooks/useToggle";
 import { ServicesBtnPlay } from "./servicesBtnPlay";
-import { ServicesModal } from "./servicesModal";
+import { ServicesModal } from "./ServicesModal";
+import * as C from "./style";
 
 export const ServicesHero = () => {
-  const ServicesHeroRef = useRef<HTMLDivElement | null>(null);
-  const ServicesVideoRef = useRef<HTMLVideoElement | null>(null);
-  const [isServicesHeroModal, setIsServicesHeroModal] = useState(false);
+  const { state } = useToggle();
 
   return (
     <C.ServicesHero>
-      <ServicesBtnPlay
-        modalRef={ServicesHeroRef}
-        isModal={isServicesHeroModal}
-        setIsModal={setIsServicesHeroModal}
-      />
-      <ServicesModal
-        modalRef={ServicesHeroRef}
-        modalVideoRef={ServicesVideoRef}
-        isModal={isServicesHeroModal}
-        setIsModal={setIsServicesHeroModal}
-      />
+      <ServicesBtnPlay />
+      {state.isModalServices && <ServicesModal />}
     </C.ServicesHero>
   );
 };

@@ -1,6 +1,6 @@
 import * as C from "./style";
 import { BsChevronDoubleDown } from "react-icons/bs";
-import { EventsCarousel } from "./eventsCarousel";
+import { EventsCarousel } from "./EventsCarousel";
 import About from "../assets/img/about.png";
 
 export const Events = () => {

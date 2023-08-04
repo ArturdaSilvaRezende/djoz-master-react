@@ -1,8 +1,8 @@
 import { Countdown } from "../../components/countdown";
 import { Footer } from "../../components/footer";
-import { Header } from "../../components/header";
+import { Header } from "../../components/Header";
 import { Events } from "./events";
-import { Hero } from "./hero";
+import { Hero } from "./Hero";
 import { Latest } from "./latest";
 import { Services } from "./services";
 

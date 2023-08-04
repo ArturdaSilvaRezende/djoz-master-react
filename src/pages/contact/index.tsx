@@ -1,5 +1,5 @@
 import * as C from "./style";
-import { Header } from "../../components/header";
+import { Header } from "../../components/Header";
 import { Breadcrumbs } from "../../components/breadcrumbs";
 import { ContactInfo } from "./contactInfo";
 import { ContactForm } from "./contactForm";
