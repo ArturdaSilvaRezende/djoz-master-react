@@ -36,6 +36,6 @@ Ele agrupa corretamente o React no modo de produção e otimiza a construção p
 A compilação é reduzida e os nomes dos arquivos incluem os hashes. \
 Seu aplicativo está pronto para ser implantado!
 
-#### O site do projeto está hospedado no "netlify", caso você queira fazer uma visita ao site, basta clicar no link abaixo
+### O site do projeto está hospedado no "Netlify", caso você queira fazer uma visita ao site, basta clicar no link abaixo
 
 [Dj Oz Master React](https://imagine-music-festival.netlify.app/)
